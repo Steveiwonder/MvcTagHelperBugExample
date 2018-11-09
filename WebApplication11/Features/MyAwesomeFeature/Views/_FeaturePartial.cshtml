@@ -1,0 +1,11 @@
+﻿@model WebApplication11.Controllers.IndexViewModel
+@{
+    var selectList = new SelectList(Model.People,"Id", "Name");
+}
+<form>
+    <input asp-for="ACheckbox"/>
+    
+    <select asp-for="SelectedPerson" asp-items="selectList">
+        <option value="0">Select person...</option>
+    </select>
+</form>
